@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy:static": "next build && next export"
+    "deploy:static": "next build"
   },
   "dependencies": {
     "@strapi/blocks-react-renderer": "^1.0.0",

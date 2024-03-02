@@ -1,10 +1,10 @@
 'use client'
 
 import { JsonPosts, getPost } from "@/data/posts/get-post";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useParams, useSearchParams } from 'next/navigation';
 import { PostAttributesData } from "@/domain/posts/post";
-import { getText } from "@/utils/markdown-to-html";
+// import { getText } from "@/utils/markdown-to-html";
 import { BlocksContent } from "@strapi/blocks-react-renderer";
 import { Post } from "@/containers/Post";
 
@@ -15,7 +15,6 @@ export default function DynamicPost() {
     const {slug} = useParams()
 
     async function searchData() {
-        console.log(slug);
         const {data} = await getPost(slug);
         return data;
     }
@@ -26,12 +25,14 @@ export default function DynamicPost() {
         });
     }, []);
 
-    if (!post) return;
+    useEffect(() => {
+        if (post) {
+            setText(post.content);
+            setLoading(false);
+        }
+    }, [post]);
 
-    getText(post.content).then((response) => {
-        setText(response);
-        setLoading(false);
-    });
+    if (!post) return;
 
     if (!text) return;
     if (loading) return <p>Carregando...</p>

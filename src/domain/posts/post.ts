@@ -1,3 +1,4 @@
+import { BlocksContent } from "@strapi/blocks-react-renderer";
 
 export type PostID = number;
  
@@ -99,7 +100,8 @@ export type PostCoverDataAttributes = {
  
 export type PostAttributesData = {
   title: string;
-  content: Array<object>;
+  // content: Array<object>;
+  content: BlocksContent;
   slug: string;
   author: PostAuthor;
   category: PostCategory;
