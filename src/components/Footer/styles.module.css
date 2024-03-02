@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.footer {
+    position: relative;
+    bottom: -47px;
+    margin-top: 3em;
+    text-align: center;
+    padding: .5em;
+    font-style: italic;
+}
+
+.footer_a {
+    color: var(--main_purple);
+}

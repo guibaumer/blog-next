@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.h2 {
+    font-size: var(--extra_font_size);
+    margin: .5em auto;
+    text-align: center;
+}

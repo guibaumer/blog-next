@@ -1,0 +1,24 @@
+'use client'
+import { useEffect, useState } from "react";
+import { PostData } from "@/domain/posts/post";
+import { getAllPosts } from "@/data/posts/get-all-posts";
+import HomePage from "@/containers/HomePage";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+export default function Home() {
+  const [posts, setPosts] = useState<PostData[]>([]);
+
+  useEffect(() => {
+    getAllPosts('sort=id:DESC&pagination[start]=0&pagination[limit]=30').then((response) => {
+      setPosts(response);
+    });
+
+  }, []);
+
+  return (
+    <>
+    <HomePage posts={posts} />
+    </>
+  );
+}

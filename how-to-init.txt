@@ -1,0 +1,3 @@
+enable docker's postgres container
+initialize api on blog-strapi with "npm run start"
+initialize website on teste-next with npm run dev

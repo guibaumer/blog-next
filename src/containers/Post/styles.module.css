@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.p {
+    font-size: var(--font_size);
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.h1, .h2, .h3, .h4 {
+    text-align: left;
+    width: 100%;
+    max-width: 700px;
+    margin: .5em auto;
+} 
+
+.h1 {
+    font-size: var(--big_font_size);
+}
+
+.h2 {
+    font-size: var(--big_font_size);
+}
+
+.h3 {
+    font-size: var(--medium_font_size);
+}
+
+.h4 {
+    font-size: var(--small_font_size);
+}

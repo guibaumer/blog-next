@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+:root {
+    --main_purple: #663399;
+    --white_font: #e8e8e8;
+    --white_font_hover: #c9c9c9;
+    --dark_font: #000;
+    --dark_font_hover: #0e0e0e;
+    --details_font_color: #676161a9;
+    --black: #000;
+    --white: #fff;
+    --details_font_size: 1rem;
+    --font_size: 1.125rem;
+    --small_font_size: 1.5rem;
+    --medium_font_size: 1.75rem;
+    --big_font_size: 2rem;
+    --extra_font_size: 2.250rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+p, a {
+    font-size: 1.125rem;
+    line-height: 1.5em;
+}
+

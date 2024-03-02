@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.card_div {
+    width: 100%;
+    max-width: 270px;
+    padding: .5em;
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cover_image {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.cover_image:hover {
+    opacity: .8;
+}
+
+.post_title_link {
+    margin-top: 5px;
+    color: var(--dark_font);
+    align-self: flex-start;
+}
+
+.post_title_link:hover {
+    color: var(--dark_font_hover);
+}

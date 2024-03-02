@@ -1,0 +1,39 @@
+
+
+import styles from "./page.module.css";
+import { useEffect, useState } from "react";
+import { PostData } from "@/domain/posts/post";
+
+const getPosts = async(): Promise<PostData[]> => {
+  const data = await fetch('http://localhost:1337/api/posts');
+  const postsJson = await data.json();
+  return postsJson.data;
+}
+
+export type HomeProps = {
+  posts: PostData[];
+}
+
+export default function Home({posts}: HomeProps) {
+ 
+  return (
+    <>
+    <p>Hello</p>
+    <p>Beginning</p>
+    <div>
+      {posts.map((post) => (
+          <p key={post.attributes.slug}>{post.attributes.title}</p> 
+       ))}
+     </div> 
+     <p>End</p>
+    </>
+  );
+}
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const posts = await getPosts();
+
+  return {
+    props: {posts}
+  }
+}
