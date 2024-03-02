@@ -3,5 +3,5 @@ export const POSTS_URL = `${API_URL}/posts?populate=*`;
 export const POSTS_URL_MAX = `${API_URL}/posts?populate=*&_populate[author][_populate][0]=name&_populate[category][_populate][0]=name`
 
 export const SITE_NAME = 'BLOG';
-export const HOME = 'http://localhost:3000/';
-export const SITE_URL = process.env.SITE_URL;
+export const HOME = 'https://main--blogstrapi.netlify.app/';
+export const SITE_URL = 'https://main--blogstrapi.netlify.app/';
