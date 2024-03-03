@@ -7,6 +7,12 @@
     font-style: italic;
     display: flex;
     text-align: center;
+    align-items: center;
     color: var(--details_font_color);
+}
+
+.link {
+    color: var(--main_purple);
+    font-size: var(--details_font_size);
 }
 

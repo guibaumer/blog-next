@@ -5,15 +5,23 @@ import { PostData } from "@/domain/posts/post"
 import Footer from '@/components/Footer';
 import Head from 'next/head';
 import { SITE_NAME } from '@/config/app-config';
+import { Heading } from '@/components/Heading';
 
 export type HomePageProps = {
     posts: PostData[];
+    title: string;
 }
 
-export default function HomePage({posts}: HomePageProps ) {
+export default function HomePage({posts, title = ''}: HomePageProps) {
     return (
         <>
         <Header />
+
+        {title && (
+            <Heading>
+                {title}
+            </Heading>
+        )}
 
         <section className={styles.main_section}>
             <div className={styles.grid}>

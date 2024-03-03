@@ -5,6 +5,7 @@ import { fetchJson } from "@/utils/fetch-json";
 export type JsonPosts = {
   data: PostData[];
 }
+
 export const getAllPosts = async(query = ''): Promise<PostData[]> => {
     const url = `${POSTS_URL}&${query}`
 
