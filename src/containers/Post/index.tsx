@@ -7,14 +7,20 @@ import { Heading } from '@/components/Heading';
 import { PostCover } from '@/components/PostCover';
 import PostDetails from '@/components/PostDetails';
 import Comments from '@/components/Comments';
+import Head from 'next/head';
 
 export type PostProps = {
     post: PostAttributesData;
     text: BlocksContent;
 }
+
 export function Post({ post, text }: PostProps) {
+
   return (
     <>
+      <Head>
+            <title>POPOPOPO</title>
+      </Head>
       <Header />
       <Heading>{post.title}</Heading>
       <PostCover

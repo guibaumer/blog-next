@@ -10,8 +10,8 @@ export type PostDetailsProps = {
 
 export default function PostDetails({author, category, date}: PostDetailsProps) {
     return (
-        <p className={styles.details_p}>
+        <div className={styles.details_div}>
             Publicado em&nbsp;<PostDate date={date}/>&nbsp; por {author} em {category}
-        </p>
+        </div>
     )
 }

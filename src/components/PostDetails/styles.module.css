@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.details_p {
+.details_div {
     margin: auto;
     max-width: 700px;
     font-size: var(--details_font_size);

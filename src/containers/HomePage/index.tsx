@@ -3,6 +3,8 @@ import styles from './styles.module.css';
 import PostCard from '@/components/PostCard';
 import { PostData } from "@/domain/posts/post"
 import Footer from '@/components/Footer';
+import Head from 'next/head';
+import { SITE_NAME } from '@/config/app-config';
 
 export type HomePageProps = {
     posts: PostData[];

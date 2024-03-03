@@ -1,10 +1,9 @@
 'use client'
 
-import { JsonPosts, getPost } from "@/data/posts/get-post";
-import { useCallback, useEffect, useState } from "react";
+import { getPost } from "@/data/posts/get-post";
+import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from 'next/navigation';
 import { PostAttributesData } from "@/domain/posts/post";
-// import { getText } from "@/utils/markdown-to-html";
 import { BlocksContent } from "@strapi/blocks-react-renderer";
 import { Post } from "@/containers/Post";
 
