@@ -15,8 +15,7 @@ export default function PostDetails({author, category, date}: PostDetailsProps) 
     return (
         <div className={styles.details_div}>
             Publicado em&nbsp;<PostDate date={date}/>&nbsp; por {author} em
-            &nbsp;<Link className={styles.link} href={url}><a>{category}</a></Link>.
-            <p>ffffffffff</p>
+            &nbsp;<Link className={styles.link} href={url}><a>{category}</a></Link>
         </div>
     )
 }

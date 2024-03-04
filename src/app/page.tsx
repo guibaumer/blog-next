@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import { PostData } from "@/domain/posts/post";
 import { getAllPosts } from "@/data/posts/get-all-posts";
 import HomePage from "@/containers/HomePage";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   const [posts, setPosts] = useState<PostData[]>([]);
