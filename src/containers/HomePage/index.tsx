@@ -9,7 +9,7 @@ import { Heading } from '@/components/Heading';
 
 export type HomePageProps = {
     posts: PostData[];
-    title: string;
+    title?: string;
 }
 
 export default function HomePage({posts, title = ''}: HomePageProps) {
