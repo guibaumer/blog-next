@@ -1,4 +1,3 @@
-import { formatDate } from '@/utils/format-date';
 import styles from './styles.module.css';
 import PostDate from '../PostDate';
 import Link from 'next/link';
@@ -12,10 +11,12 @@ export type PostDetailsProps = {
 
 export default function PostDetails({author, category, date}: PostDetailsProps) {
     const url = `${SITE_URL}category/${category}`;
+
     return (
         <div className={styles.details_div}>
             Publicado em&nbsp;<PostDate date={date}/>&nbsp; por {author} em
             &nbsp;<Link className={styles.link} href={url}><a>{category}</a></Link>.
+            <p>ffffffffff</p>
         </div>
     )
 }
