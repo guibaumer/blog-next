@@ -13,6 +13,7 @@ export type HomePageProps = {
 }
 
 export default function HomePage({posts, title = ''}: HomePageProps) {
+    console.log('HOMEPAGE: ' + JSON.stringify(posts[0]));
     return (
         <>
         <Header />
@@ -30,7 +31,8 @@ export default function HomePage({posts, title = ''}: HomePageProps) {
                      title={post.attributes.title}
                      key={post.id}
                      slug={post.attributes.slug}
-                     coverUrl={post.attributes.cover.data.attributes.formats.small.url}
+                    coverUrl={post.attributes.cover?.data?.attributes?.formats?.small?.url || post.attributes.cover?.data?.attributes?.url || ''}
+                    // coverUrl={post.cover.data.attributes.formats?.small?.url || post.cover.data.attributes.url || ''}
                      /> 
                 ))} 
             </div>

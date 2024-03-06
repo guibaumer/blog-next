@@ -15,6 +15,8 @@ export type PostProps = {
 }
 
 export function Post({ post, text }: PostProps) {
+let url = post.cover.data.attributes.formats?.small?.url || post.cover.data.attributes.url || '';
+
 
   return (
     <>
@@ -24,7 +26,9 @@ export function Post({ post, text }: PostProps) {
       <Header />
       <Heading>{post.title}</Heading>
       <PostCover
-        url={post.cover.data.attributes.formats.small.url}
+        url={url}
+        // url={post.cover?.data?.attributes?.formats?.small?.url || post.cover?.data?.attributes?.url}
+
         alt={post.title}
       />
       <PostDetails

@@ -56,24 +56,6 @@ export type PostCoverFormat = {
  
 export type PostCover = PostCoverFormat & {
   data: PostCoverData;
-
-  // IF SOME ERROR APPEARS FROM HERE, REMOVE "data: ..." AND THE TWO TYPES BELOW "PostCover", THEN UNCOMMENT THIS LINES HERE. 
-  
-  // id: PostID;
-  // alternativeText: string;
-  // caption: string;
-  // previewUrl: null;
-  // provider: string;
-  // created_by: number;
-  // updated_by: number;
-  // created_at: string;
-  // updated_at: string;
-  // formats: {
-  //   thumbnail: PostCoverFormat;
-  //   small: PostCoverFormat;
-  //   medium: PostCoverFormat;
-  //   large: PostCoverFormat;
-  // };
 };
 
 export type PostCoverData = {
@@ -90,17 +72,46 @@ export type PostCoverDataAttributes = {
   updated_by: number;
   created_at: string;
   updated_at: string;
-  formats: {
+  formats?: {
     thumbnail: PostCoverFormat;
     small: PostCoverFormat;
     medium: PostCoverFormat;
     large: PostCoverFormat;
   };
+  url?: string;
 }
  
+// type PostCoverDataAttributesBase = {
+//   alternativeText: string;
+//   caption: string;
+//   previewUrl: null;
+//   provider: string;
+//   created_by: number;
+//   updated_by: number;
+//   created_at: string;
+//   updated_at: string;
+// };
+
+// type PostCoverDataAttributesWithFormats = PostCoverDataAttributesBase & {
+//   formats: {
+//     thumbnail: PostCoverFormat;
+//     small: PostCoverFormat;
+//     medium: PostCoverFormat;
+//     large: PostCoverFormat;
+//   };
+//   url?: never;
+// };
+
+// type PostCoverDataAttributesWithUrl = PostCoverDataAttributesBase & {
+//   formats?: never;
+//   url: string;
+// };
+
+// type PostCoverDataAttributes = PostCoverDataAttributesWithFormats | PostCoverDataAttributesWithUrl;
+
+
 export type PostAttributesData = {
   title: string;
-  // content: Array<object>;
   content: BlocksContent;
   slug: string;
   author: PostAuthor;
