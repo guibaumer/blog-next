@@ -13,7 +13,6 @@ export type HomePageProps = {
 }
 
 export default function HomePage({posts, title = ''}: HomePageProps) {
-    console.log('HOMEPAGE: ' + JSON.stringify(posts[0]));
     return (
         <>
         <Header />
