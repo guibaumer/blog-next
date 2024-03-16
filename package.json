@@ -13,10 +13,8 @@
     "clearCache": "jest --clearCache",
     "test:watch": "jest --watch"
   },
-  "moduleNameMapper": {
-    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
-  },
   "dependencies": {
+    "@babel/preset-env": "^7.24.0",
     "@strapi/blocks-react-renderer": "^1.0.0",
     "disqus-react": "^1.1.5",
     "next": "14.1.0",

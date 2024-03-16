@@ -10,12 +10,14 @@ export type PostDetailsProps = {
 }
 
 export default function PostDetails({author, category, date}: PostDetailsProps) {
-    const url = `${SITE_URL}category/${category}`;
+    const url = `${SITE_URL}pages/1/${category}`;
+    // const url = `${SITE_URL}category/${category}`;
 
     return (
         <div className={styles.details_div}>
             Publicado em&nbsp;<PostDate date={date}/>&nbsp; por {author} em
-            &nbsp;<Link className={styles.link} href={url}>{category}</Link>
+            &nbsp;
+            <Link className={styles.link} as={url} href={'/pages/[...params]'}>{category}</Link>
         </div>
     )
 }

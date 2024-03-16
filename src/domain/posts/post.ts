@@ -127,3 +127,9 @@ export type PostData = {
     id: PostID;
     attributes: PostAttributesData;
 };
+
+// TYPE USED ON THE RESPONSE OF get-all-posts.ts WHEN IT IS ASKED TO RETURN count TOO
+export type PostResponse =  {
+  data: PostData[],
+  pagination: number
+} | PostData[];

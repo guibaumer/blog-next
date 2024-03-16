@@ -1,10 +1,14 @@
 'use client'
 
+import { getPost } from "@/data/posts/get-post";
 import { useEffect, useState } from "react";
-import { useParams } from 'next/navigation';
-import { PostData } from "@/domain/posts/post";
+import { useParams, useSearchParams } from 'next/navigation';
+import { PostAttributesData, PostData } from "@/domain/posts/post";
+import { BlocksContent } from "@strapi/blocks-react-renderer";
+import { Post } from "@/containers/Post";
 import HomePage from "@/containers/HomePage";
 import { getAllPosts } from "@/data/posts/get-all-posts";
+import { Heading } from "@/components/Heading";
 import ErrorMessage from '@/components/ErrorMessage';
 
 export default function DynamicPost() {
@@ -24,9 +28,8 @@ export default function DynamicPost() {
 
     useEffect(() => {
         searchData().then((response) => {
-            if (Array.isArray(response)) {
-                setPosts(response);  
-            }
+            console.log(response);
+            setPosts(response);  
         });
     }, []);
 

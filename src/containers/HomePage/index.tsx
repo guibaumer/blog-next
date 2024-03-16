@@ -6,13 +6,17 @@ import Footer from '@/components/Footer';
 import Head from 'next/head';
 import { SITE_NAME } from '@/config/app-config';
 import { Heading } from '@/components/Heading';
+import { PaginationData } from '@/domain/pagination/pagination';
+import Pagination from '@/components/Pagination';
 
 export type HomePageProps = {
     posts: PostData[];
     title?: string;
+    category?: string;
+    pagination?: PaginationData;
 }
 
-export default function HomePage({posts, title = ''}: HomePageProps) {
+export default function HomePage({posts, title = '', category, pagination}: HomePageProps) {
     return (
         <>
         <Header />
@@ -37,6 +41,7 @@ export default function HomePage({posts, title = ''}: HomePageProps) {
             </div>
         </section>
 
+        {pagination && <Pagination {...pagination} />}            
         <Footer />
         </>
     )
